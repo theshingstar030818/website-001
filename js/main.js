@@ -4,29 +4,29 @@
     //preloader
     $("#status").fadeOut(); // will first fade out the loading animation
     $("#preloader").delay(450).fadeOut("slow"); // will fade out the white DIV that covers the website.
-    
+
     //masonry
     $('.grid').masonry({
       itemSelector: '.grid-item'
-      
-    });    
+
+    });
   });
 
 
-  $(document).ready(function(){  
+  $(document).ready(function(){
 
     //active menu
     $(document).on("scroll", onScroll);
- 
+
     $('a[href^="#"]').on('click', function (e) {
       e.preventDefault();
       $(document).off("scroll");
- 
+
       $('a').each(function () {
         $(this).removeClass('active');
       })
       $(this).addClass('active');
- 
+
       var target = this.hash;
       $target = $(target);
       $('html, body').stop().animate({
@@ -37,7 +37,7 @@
       });
     });
 
-    
+
     //scroll js
     smoothScroll.init({
       selector: '[data-scroll]', // Selector for links (must be a valid CSS selector)
@@ -89,8 +89,29 @@
 
 
     //typed js
+    $(".typedGreeting").typed({
+        strings: [
+            "BONJOUR",
+            "HOLA",
+            "HALLO",
+            "CIAO",
+            "OLÀ",
+            "NAMASTE",
+            "SALAAM",
+            "ZDRAS-TVUY-TE",
+            "OHAYO",
+            "NAY HOH",
+            "MERHABA"
+        ],
+        typeSpeed: 50,
+        backDelay: 200,
+        // loop
+        loop: true
+    });
+
+    //typed js
     $(".typed").typed({
-        strings: ["My Name is M.Reza", "I'm a Web Designer", "Love Simplicity"],
+        strings: ["My name is Tanzeel", "I'm a full-stack developer"],
         typeSpeed: 100,
         backDelay: 900,
         // loop
@@ -100,7 +121,7 @@
     //owl carousel
     $('.owl-carousel').owlCarousel({
       autoPlay: 3000, //Set AutoPlay to 3 seconds
- 
+
       items : 1,
       itemsDesktop : [1199,1],
       itemsDesktopSmall : [979,1],
@@ -114,7 +135,7 @@
 
     $('.owl-carousel2').owlCarousel({
       autoPlay: 3000, //Set AutoPlay to 3 seconds
- 
+
       items : 1,
       itemsDesktop : [1199,1],
       itemsDesktopSmall : [979,1],
@@ -145,7 +166,7 @@
       }
       // other options
     });
-    
+
     //Skill
     jQuery('.skillbar').each(function() {
       jQuery(this).appear(function() {
@@ -155,12 +176,12 @@
         var percent = jQuery(this).attr('data-percent');
         jQuery(this).find('.count').html('<span>' + percent + '</span>');
       });
-    }); 
+    });
 
-  
+
   });
-  
-    
+
+
   //header
   function inits() {
     window.addEventListener('scroll', function(e){

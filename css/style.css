@@ -912,7 +912,7 @@ ul.portfolio-image li .desc{
   width: 100%;
 }
 .bg-about {
-  background: url('../images/reza.jpg');
+  background: url('../images/tanzeel.jpg');
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1198,6 +1198,13 @@ ul.portfolio-image li .desc{
 }
 .gplus a:after{
   background: #dd4b39;
+}
+
+.linkedin{
+  background: #d8d8d8;
+}
+.linkedin a:after{
+  background: #287bbc;
 }
 
 .footer-bottom{
