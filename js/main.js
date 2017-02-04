@@ -118,6 +118,15 @@
         loop: true
     });
 
+    //typedSwipeLeft
+      $(".typedSwipeLeft").typed({
+          strings: ["you may swipe left ;)"],
+          typeSpeed: 100,
+          backDelay: 900,
+          // loop
+          loop: true
+      });
+
     //owl carousel
     $('.owl-carousel').owlCarousel({
       autoPlay: 3000, //Set AutoPlay to 3 seconds
@@ -217,3 +226,11 @@
   }
 
 })(jQuery);
+
+function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
