@@ -20,8 +20,10 @@ before_install:
   - eval "$(ssh-agent -s)"
   - chmod 600 deploy_rsa
   - ssh-add deploy_rsa
+  - export LANG=en_US.UTF-8
 install:
   - echo install
+  - scp -r -o StrictHostKeyChecking=no -i deploy_rsa web/* root@162.243.118.87:/var/www/html/
 before_script:
   - echo before_script
   - echo $JAVA_HOME
@@ -31,3 +33,4 @@ script:
   - echo script
 after_script:
   - echo after_script
+  - rm -rf *
